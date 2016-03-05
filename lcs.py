@@ -1,7 +1,13 @@
 #!/usr/bin/env python3
+'''
+the longest common subsequence algorithm
+using dynamic programming
+'''
 
 def LCS(str1, str2):
-
+    '''
+    longest common subsequence of two strings str1 and str2
+    '''
     m = len(str1)
     n = len(str2)
 
@@ -20,6 +26,9 @@ def LCS(str1, str2):
 
 
 def backtrack(str1, str2, array, i, j):
+    '''
+    backtrack to find the longest substr
+    '''
     if i == 0 or j == 0:
         return ""
     elif str1[i-1] == str2[j-1]:
@@ -31,6 +40,9 @@ def backtrack(str1, str2, array, i, j):
 
 
 def main():
+    '''
+    sample test example
+    '''
     str1 = 'abcbdab'
     str2 = 'bdcaba'
 
